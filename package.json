@@ -1,0 +1,30 @@
+{
+  "name": "themoviedb",
+  "version": "3.0.0",
+  "description": "A Javascript library to interact with themoviedb.org Rest API.",
+  "filename": "themoviedb.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrotari7/themoviedb.git"
+  },
+  "keywords": [
+    "RESTful",
+    "MovieDB"
+  ],
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "tsc",
+    "start": "npm run build && node build/src/test.js"
+  },
+  "author": "Franco Cavestri",
+  "license": "MIT",
+  "homepage": "https://github.com/cavestri/themoviedb-javascript-library",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
