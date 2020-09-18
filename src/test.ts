@@ -1,6 +1,11 @@
-import TheMovieDB from './themoviedb';
+import * as dotenv from 'dotenv';
 
-const api_key = 'api_key';
+import TheMovieDB from '.';
+
+dotenv.config();
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+const api_key = process.env['API_KEY'] as string;
 
 const moviedb = new TheMovieDB(api_key);
 
@@ -8,13 +13,13 @@ const workflow = async () => {
   const conf = await moviedb.configurations.getConfiguration();
   console.log(conf);
 
-  const searchResult: any = await moviedb.search.getMovie({ query: 'tenet' });
+  const searchResult = await moviedb.search.getMovies({ query: 'tenet' });
   console.log(searchResult);
 
   const movie = searchResult.results[0];
 
-  const images = await moviedb.movies.getImages({ id: movie.id });
+  const images = await moviedb.movies.getImages(movie.id, {});
   console.log(images);
 };
 
-workflow();
+void workflow();

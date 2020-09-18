@@ -1,8 +1,9 @@
 {
   "name": "themoviedb",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "description": "A Javascript library to interact with themoviedb.org Rest API.",
-  "filename": "themoviedb.js",
+  "filename": "index.js",
+  "main": "build/src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/pedrotari7/themoviedb.git"
@@ -13,15 +14,18 @@
     "start": "npm run build && node build/src/test.js",
     "lint": "eslint --fix --ext .ts ."
   },
-  "author": "Franco Cavestri",
+  "author": "Pedro Alvito",
   "license": "MIT",
   "homepage": "https://github.com/pedrotari7/themoviedb",
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "14",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
+    "dotenv": "^8.2.0",
     "eslint": "^7.9.0",
     "nodemon": "^2.0.4",
     "ts-node": "^9.0.0",

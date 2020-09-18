@@ -5,6 +5,7 @@
     "lib": ["es2017", "DOM"],
     "allowJs": true,
     "outDir": "build",
+    "declaration": true,
     "rootDir": ".",
     "strict": true,
     "noImplicitAny": true,
