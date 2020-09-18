@@ -7,22 +7,22 @@
     "type": "git",
     "url": "https://github.com/pedrotari7/themoviedb.git"
   },
-  "keywords": [
-    "RESTful",
-    "MovieDB"
-  ],
   "scripts": {
     "start:dev": "nodemon",
     "build": "tsc",
-    "start": "npm run build && node build/src/test.js"
+    "start": "npm run build && node build/src/test.js",
+    "lint": "eslint --fix --ext .ts ."
   },
   "author": "Franco Cavestri",
   "license": "MIT",
-  "homepage": "https://github.com/cavestri/themoviedb-javascript-library",
+  "homepage": "https://github.com/pedrotari7/themoviedb",
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
     "nodemon": "^2.0.4",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
