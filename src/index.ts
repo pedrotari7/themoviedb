@@ -1,4 +1,3 @@
-import { XMLHttpRequest } from 'xmlhttprequest';
 import {
   AccountOpts,
   AccountSateGuestOpts,
@@ -32,6 +31,7 @@ import {
   ID,
   Images,
   MediaType,
+  MovieListResult,
   MultiResults,
   Obj,
   ProfileImages,
@@ -288,7 +288,7 @@ export default class TheMovieDB {
   };
 
   public movies = {
-    getById: (id: ID, opts?: MoviesOpts) => this.GET<Movie>(`movie/${id}`, opts),
+    getById: (id: ID, opts?: MoviesOpts) => this.GET<MovieListResult>(`movie/${id}`, opts),
     getAccountStates: (id: ID, opts: AccountSateOpts) => this.GET<AccountState>(`movie/${id}/account_states`, opts),
     getAccountStatesGuest: (id: ID, opts: AccountSateGuestOpts) =>
       this.GET<AccountState>(`movie/${id}/account_states`, opts),

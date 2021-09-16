@@ -1,6 +1,6 @@
 {
   "name": "themoviedb-typescript",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Javascript library to interact with themoviedb.org Rest API.",
   "filename": "index.js",
   "main": "build/src/index.js",
